@@ -1,4 +1,258 @@
-# Per Scholas Lab 1
+<img width="498" height="103" alt="image" src="https://github.com/user-attachments/assets/38f3794e-58c4-4b3d-a31e-4ef089121296" />
+
+#  Per Scholas Software Engineer Bootcamp LAB 1.1
+
+## Do you want to get ***free*** tech training from Per Scholas?
+
+## [Click Here to find out how!](https://perscholas.referralrock.com/l/7MIDHLPB/) 
+
+*************************************************************************************************************
+
+# Lab 1
+
+Branching, Merging, and Handling Conflicts
+
+By completing this activity, you will simulate a typical workflow used in collaborative development environments. You will practice creating, working on, and merging branches while resolving conflicts, as you would in a real workplace. These skills are vital for managing and collaborating on complex software projects.
+
+Scenario
+
+You are part of a development team at a tech company that is building a new website for a client. Each member of the team is responsible for different sections of the website, such as the navigation bar, footer, hero section, and contact form. To ensure that your work does not interfere with other developers’ work and vice versa, you will use Git branching and merging to work on your assigned features in isolation and then integrate them back into the main project.
+
+Your project manager has asked you to:
+
+Work on specific features independently using branches.
+Merge your changes back into the main branch once your features are completed.
+Resolve any merge conflicts that arise during the process.
+
+Once you have completed the guided features, you will be tasked with working on additional features of the website, just like you would in a real-world team project.
+
+# Part 1: Set Up the Repository
+
+Your team has set up a shared GitHub repository for the project, but you need to start working on it locally.
+
+Create a New Local Repository:
+
+Navigate to your working directory and create a new Git repository:
+
+
+```bash
+
+$ mkdir website-project
+$ cd website-project
+$ git init
+```
+
+Create a Simple HTML File:
+
+Your project manager has provided you with the basic structure of the homepage. Create an index.html file with this basic HTML structure:
+
+
+```html
+<html>
+  <head>
+    <title>Website</title>
+  </head>
+  <body>
+    <h1>Welcome to Our Website</h1>
+  </body>
+</html>
+```
+
+Commit the Initial Version:
+
+Stage and commit the file as your first contribution to the project:
+```bash
+$ git add index.html
+$ git commit -m "Initial commit with basic HTML structure"
+```
+
+# Part 2: Work on Separate Features Using Branches
+
+To keep your work organized and avoid conflicts with your teammates, your project manager has assigned you specific features to work on using Git branches.
+
+Task 1: Add a Navigation Bar
+
+Create a Branch for Feature 1 (Navigation Bar):
+
+Your first assignment is to add a navigation bar to the website. Create a new branch for this feature:
+
+```bash
+$ git checkout -b feature/navigation-bar
+```
+Modify index.html to Add a Navigation Bar:
+
+Add the navigation bar code to the index.html file:
+
+
+```html
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+```
+
+Commit the Changes:
+
+Once you have added the navigation bar, stage and commit your changes:
+
+```bash
+$ git add index.html
+$ git commit -m "Added navigation bar"
+```
+
+# Part 3: Work on Another Feature Using a Separate Branch
+
+Task 2: Add a Footer
+
+Your next assignment is to add a footer section to the website.
+
+Create a Branch for Feature 2 (Footer):
+
+Create a new branch for this feature:
+
+```bash
+$ git checkout -b feature/footer
+```
+
+Modify index.html to Add a Footer:
+
+Add the footer code to the index.html file:
+
+```html
+<footer>
+  <p>&copy; 2025 My Website</p>
+</footer>
+```
+
+Commit the Changes:
+
+Stage and commit the changes:
+
+```bash
+$ git add index.html
+$ git commit -m "Added footer section"
+```
+
+# Part 4: Merge Your Work and Resolve Conflicts
+
+Once you have completed your features, your project manager will ask you to merge your changes into the main branch.
+
+Merge feature/navigation-bar into main:
+
+Your first task is to merge the navigation bar branch into the main branch:
+
+
+```
+$ git checkout main
+$ git merge feature/navigation-bar
+```
+
+There should be no conflicts during this merge.
+
+Merge feature/footer into main:
+
+Next, attempt to merge the footer branch into the main branch:
+
+```
+$ git merge feature/footer
+```
+
+You may encounter a merge conflict since both branches made changes to the same file. Do not worry, this is common in collaborative projects.
+
+Resolve the Merge Conflict:
+
+Git will highlight the conflict in the index.html file. The conflicting code will look something like this:
+
+```html
+<<<<<<< HEAD
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+=======
+<footer>
+  <p>&copy; 2024 My Website</p>
+</footer>
+>>>>>>> feature/footer
+```
+
+Manually edit the file to include both sections:
+
+
+```
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<footer>
+  <p>&copy; 2024 My Website</p>
+</footer>
+```
+
+Commit the Resolved File:
+
+Stage and commit the resolved file:
+
+
+```
+$ git add index.html
+$ git commit -m "Resolved merge conflict and combined navigation bar and footer"
+```
+
+$ Part 5: Explore Additional Features and Practice Branching on Your Own
+
+Now that you have successfully merged two features, your project manager has assigned you additional features to complete independently. Create a new branch for each feature and merge them into the main branch one by one. Ensure that you resolve any conflicts that arise.
+
+## Task 3: Add a Hero Section
+
+Create a Branch: Create a new branch called feature/hero-section.
+
+Modify index.html: Add a hero section with an image or background, heading, and a short paragraph.
+
+Commit: Stage and commit your changes.
+
+## Task 4: Add a Contact Form
+
+Create a Branch: Create a new branch called feature/contact-form.
+
+Modify index.html: Add a simple contact form with fields for name, email, and message.
+
+Commit: Stage and commit your changes.
+
+
+## Task 5: Add a Testimonials Section
+
+Create a Branch: Create a new branch called feature/testimonials.
+
+Modify index.html: Add a section for customer testimonials with a few placeholder quotes.
+
+Commit: Stage and commit your changes.
+
+
+# Part 6: Push Your Work to GitHub
+When you have completed the tasks and merged all your features into the main branch:
+
+Push the Changes to GitHub:
+Push your project to GitHub:
+
+```
+$ git push origin main
+```
+
+Submission Guidelines
+Submit the link to your GitHub repository on Canvas.
+
+
+# Per Scholas Lab 1.1
 
 # Branching, Merging, and Handling Conflicts
 
