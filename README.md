@@ -1,4 +1,4 @@
-<img width="498" height="103" alt="image" src="https://github.com/user-attachments/assets/38f3794e-58c4-4b3d-a31e-4ef089121296" />
+<img width="250" height="50" alt="image" src="https://github.com/user-attachments/assets/38f3794e-58c4-4b3d-a31e-4ef089121296" />
 
 #  Per Scholas Software Engineer Bootcamp LAB 1.1
 
@@ -8,7 +8,7 @@
 
 *************************************************************************************************************
 
-# Lab 1
+# Module 1 Lab 1
 
 Branching, Merging, and Handling Conflicts
 
